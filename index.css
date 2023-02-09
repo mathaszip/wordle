@@ -11,6 +11,10 @@ body {
 h1 {
     font-weight: normal;
 }
+p {
+    display: inline;
+}
+
 
 a {
     color: inherit;
@@ -29,4 +33,16 @@ input {
 button {
     font: inherit;
     padding: 0.2em 0.5em;
+}
+
+.red {
+    color: grey;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
 }

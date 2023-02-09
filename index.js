@@ -37,7 +37,7 @@ function generateRandomNumber(max) {
 }
 
 function check(guess) {
-    guess.split("");    //Splitting the string variable guess into an array of characters
+
 
     let final = ["N", "N", "N", "N", "N"];
 
@@ -64,10 +64,15 @@ function playnow(play) {
     let message = document.querySelector("#answer6");
     let button = document.querySelector("#button" + play);
 
+    guess.split("");
     let final = check(guess);
+    let final2 = final.split("");
+        //Splitting the string variable guess into an array of characters
+
+
+    let selector;
 
     button.remove();
-
     if (final === "CCCCC") {
         message.innerHTML = "You won";
     }
@@ -75,7 +80,18 @@ function playnow(play) {
         message.innerHTML = "Sorry you lost, the word was: " + word;
     }
     else {
-        document.getElementById("guess" + play).value = check(guess);
-        document.getElementById("guess" + (play + 1)).value = guess;
+        for (let i = 0; i < 5; i++) {
+            selector = document.querySelector("#answer" + play + (i + 1));
+            selector.innerHTML = guess[i];
+            if (final2[i] === "C") {
+                selector.classList.add("green");
+            }
+            else if (final2[i] === "I") {
+                selector.classList.add("yellow");
+            }
+            else {
+                selector.classList.add("grey");
+            }
+        }
     }
 }
