@@ -27,7 +27,7 @@ function generateNewWord() {
         "Truth,Uncle,Union,Unity,Value,Video,Visit,Voice,Waste,Watch,Water,While,White,Whole,Woman,World,Youth";
     let array = temp.split(",");
 
-    word = array[generateRandomNumber(100)];
+    word = array[generateRandomNumber(590)];
 }
 
 function generateRandomNumber(max) {
